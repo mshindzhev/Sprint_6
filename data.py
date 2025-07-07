@@ -1,6 +1,8 @@
 from page_object.locators.order_page_locators import OrderPageLocators
 
 URL_MAIN = 'https://qa-scooter.praktikum-services.ru/'
+URL_ORDER = 'https://qa-scooter.praktikum-services.ru/order'
+
 ANSWER_DATA = [
     'Сутки — 400 рублей. Оплата курьеру — наличными или картой.',
     'Пока что у нас так: один заказ — один самокат. Если хотите покататься с друзьями, можете просто сделать несколько заказов — один за другим.',

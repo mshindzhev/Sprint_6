@@ -21,6 +21,9 @@ class OrderPageLocators:
     BUTTON_CREATE_ORDER = By.XPATH, ".//button[text()='Заказать'][@class='Button_Button__ra12g Button_Middle__1CSJM']"
     BUTTON_APPROVE_CREATE_ORDER = By.XPATH, ".//button[text()='Да'][@class='Button_Button__ra12g Button_Middle__1CSJM']"
     HEADER_CREATED_ORDER = By.XPATH, ".//*[@class='Order_ModalHeader__3FDaJ'][text()='Заказ оформлен']"
+    LOGO_YANDEX = By.XPATH, ".//*[@alt='Yandex']"
+    LOGO_SCOOTER = By.XPATH, ".//*[@alt='Scooter']"
+    LOCATOR_DZEN = By.XPATH, ".//*[@class='dzen-layout--generic-svg__genericSvg-Uw dzen-layout--navigation-tab__icon-mj']"
 
 
 

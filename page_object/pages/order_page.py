@@ -1,4 +1,5 @@
 import allure
+from selenium.webdriver.support.wait import WebDriverWait
 
 from page_object.locators.order_page_locators import OrderPageLocators
 from page_object.pages.base_page import BasePage
@@ -30,6 +31,14 @@ class OrderPage(BasePage):
     def check_order_created(self):
         return self.find_element_with_wait(OrderPageLocators.HEADER_CREATED_ORDER)
 
+    def redirect_logo_scooter(self):
+        self.click_to_element(OrderPageLocators.LOGO_SCOOTER)
+
+    def find_logo_dzen(self):
+        self.find_element_with_wait(OrderPageLocators.LOCATOR_DZEN)
+
+    def redirect_logo_yandex(self):
+        self.click_to_element(OrderPageLocators.LOGO_YANDEX)
 
 
 
