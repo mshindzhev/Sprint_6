@@ -19,11 +19,10 @@ class BasePage:
 
     def scroll_to_element(self, element):
         self.wait.until(
-            expected_conditions.presence_of_element_located(element))
-        self.driver.execute_script("arguments[0].scrollIntoView();", element)
-        self.wait.until(
             expected_conditions.visibility_of_element_located(element))
-        return self.driver.find_element(*element)
+        formated_element = self.driver.find_element(*element)
+        self.driver.execute_script("arguments[0].scrollIntoView();", formated_element)
+        return formated_element
 
     def click_to_element(self, element):
         self.wait.until(
