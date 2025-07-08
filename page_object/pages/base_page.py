@@ -39,3 +39,11 @@ class BasePage:
         method, locator = locator_1
         locator = locator.format(num)
         return method, locator
+
+    def check_current_url(self):
+        current_url = self.driver.current_url.lower()
+        return current_url
+
+    def switch_to_next_tab(self):
+        self.driver.switch_to.window(self.driver.window_handles[-1])
+        WebDriverWait(self.driver, 15).until(lambda d: len(d.window_handles) == 2)

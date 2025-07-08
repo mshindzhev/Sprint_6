@@ -5,8 +5,8 @@ import data
 from page_object.pages.main_page import MainPage
 
 
-@allure.title('Тесты на проверку раздела "Вопросы о важном"')
-class TestOrderPage:
+
+class TestMainPage:
 
     @pytest.mark.parametrize(
         'num',
@@ -21,6 +21,7 @@ class TestOrderPage:
             7
         ]
     )
+    @allure.title('Тест на проверку раздела "Вопросы о важном"')
     def test_drop_down_list_questions_and_answers(self, driver, num):
         with allure.step('Открыть главную страницу'):
             main_page = MainPage(driver)
